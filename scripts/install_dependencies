@@ -28,7 +28,7 @@ mkdir -p $CATALINA_HOME
 
 # Download the latest Tomcat9 version
 cd /tmp
-{ which wget; } || { yum install wget; }
+{ which wget; } || { yum install wget -y; }
 wget $TOMCAT9_CORE_DOWNLOAD_URL
 if [[ -d /tmp/$TOMCAT9_CORE_UNPACKED_DIRNAME ]]; then
     rm -rf /tmp/$TOMCAT9_CORE_UNPACKED_DIRNAME
@@ -39,7 +39,7 @@ tar -xvzf $TOMCAT9_CORE_TAR_FILENAME
 cp -r /tmp/$TOMCAT9_CORE_UNPACKED_DIRNAME/* $CATALINA_HOME
 
 # Install Java if not yet installed
-{ which java; } || { yum install java; }
+{ which java; } || { yum install java -y; }
 
 # Create the service init.d script
 cat > /etc/init.d/tomcat9 <<'EOF'
