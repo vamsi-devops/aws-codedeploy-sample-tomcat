@@ -2,5 +2,4 @@
 
 #set -e
 
-sudo service tomcat9 stop
-
+echo hi
