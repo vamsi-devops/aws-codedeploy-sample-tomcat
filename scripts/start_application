@@ -11,7 +11,7 @@ TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
 WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/SampleMavenTomcatApp.war"
 HTTP_PORT_CONFIG_XSL_LOCATION="$TEMP_STAGING_DIR/configure_http_port.xsl"
 
-# In Tomcat, ROOT.war maps to the server root.
+# In Tomcat, ROOT.war maps to the server root
 if [[ "$DEPLOY_TO_ROOT" = 'true' ]]; then
     CONTEXT_PATH='ROOT'
 fi
