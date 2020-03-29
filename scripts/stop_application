@@ -2,5 +2,5 @@
 
 set -e
 
-service tomcat9 stop
+sudo service tomcat9 stop
 
