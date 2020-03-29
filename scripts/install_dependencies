@@ -67,4 +67,4 @@ EOF
 
 # Change permission mode for the service script
 chmod 755 /etc/init.d/tomcat9
-
+rm -rf /tmp/codedeploy-deployment-staging-area
